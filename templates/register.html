@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="/static/index.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="side_left"></div>
+    <div class="nav_bar">
+        <div class="nav_bar_list">
+            <a href="/info">Info</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </div>
+    <div class="side_right"></div>
+    {{ if . }}
+        <div class="error"> {{ . }}</div>
+    {{ end }}
+    <form method="POST">
+        <div><input name="username" placeholder="Username"></div>
+        <div><input name="mail" placeholder="E-Mail"></div>
+
+        <div><input name="password" placeholder="Password" type="password"></div>
+        <div>
+            <button type="submit">Register</button>
+        </div>
+    </form>
+</div>
+</div>
+</body>
+</html>

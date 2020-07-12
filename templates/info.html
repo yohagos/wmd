@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WMD - Info</title>
+    <link rel="stylesheet" type="text/css" href="/static/index.css">
+    <script src="/static/layout.js" type="application/javascript"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="side_left"></div>
+    <div class="nav_bar">
+        <div class="nav_bar_list">
+            <a href="/">Index</a>
+            <a href="/contact">Contact</a>
+            {{ if .Display }}
+                <div class="error">
+                    <a href="/newUpload">Upload</a>
+                    <a href="/logout">Logout</a>
+                </div>
+            {{ else }}
+                <a href="/register">Register</a>
+            {{ end }}
+        </div>
+    </div>
+    <div class="side_right"></div>
+    <div class="content">
+        <pre>
+            This is an web-based prototype as an platform for knowledge management.
+            So that all Students and Professors of the Frankfurt University of Applied Science,
+            can share knowledge and interesting topics. The idea was to create something equally useful
+            as research gate.
+
+            Legal information:
+            The operators of the WMD platform are not liable for misuse of the scientific papers uploaded here.
+            Only users with the corresponding authorizations are able to upload new entries.
+            These users are obliged to obtain the legally binding consent of the authors before
+            uploading the document.
+
+            During registration, the following data is required:
+            - Username
+            - Email
+            - Usertype
+            - Password
+
+            The data will only be used for registration, login and new entries.
+            This information is not passed on tothird parties.
+        </pre>
+    </div>
+</div>
+</body>
+</html>

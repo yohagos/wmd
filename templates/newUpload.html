@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/static/upload.css" type="text/css">
+    <script src="/static/categoriesList.js" type="application/javascript"></script>
+    <script src="/static/layout.js" type="application/javascript"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="side_left"></div>
+    <div class="nav_bar">
+        <div class="nav_bar_list">
+            <a href="/">Index</a>
+            <a href="/info">Info</a>
+            <a href="/contact">Contact</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div class="side_right"></div>
+    <div class="content">
+        <div class="format-form">
+            <form enctype="multipart/form-data" method="post" id="formula">
+                <input name="item" placeholder="Itemname" id="item" required>
+                <textarea name="desc" rows="4" cols="80" id="desc" placeholder="Description" required></textarea>
+                <input name="typ" id="type" placeholder="Type of scientific paper">
+
+                <div class="sel1">
+                    <select id="sel1" onchange="chooseSelectInfo(this)" required>
+                        <option selected disabled>Categories..</option>
+                        <option value="Software Development">Software Development</option>
+                        <option value="Database Technologies">Database Technologies</option>
+                        <option value="Network Technologies">Network Technologies</option>
+                    </select>
+                    <br>
+                    <select id="sel2" onchange="GetSelected()" required>
+                        <option value=""></option>
+                    </select>
+                    <br>
+                    <input id="c_hidden" name="cate">
+                </div>
+
+                <br>
+                <input name="myFile" type="file" id="up" accept="application/pdf" value="application/pdf"
+                       placeholder="Please choose a file..">
+
+                <br><br>
+                <button type="submit" id="btn">Upload</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

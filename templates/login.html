@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/static/loginRegister.css">
+    <script src="/static/layout.js" type="application/javascript"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="side_left"></div>
+    <div class="nav_bar">
+        <div class="nav_bar_list">
+            <a href="/info">Info</a>
+            <a href="/contact">Contact</a>
+            <a href="/register">Register</a>
+        </div>
+    </div>
+    <div class="side_right"></div>
+    <div class="content">
+        {{ if . }}
+            <div class="error"> {{ . }}</div>
+        {{ end }}
+        <form method="POST">
+            <div id="loginField">
+                <input name="username" placeholder="Username" id="usr">
+                <input name="password" placeholder="Password" id="pwd" type="password">
+                <button type="submit" id="btn">Login</button>
+                <br><br>
+                <div><a href="/register">Not yet registered</a></div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title> {{ .Title }} </title>
+    <link rel="stylesheet" type="text/css" href="/static/index.css">
+    <script src="/static/layout.js" type="application/javascript"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="side_left"></div>
+    <div class="nav_bar">
+        <div class="nav_bar_list">
+            <a href="/info">Info</a>
+            <a href="/contact">Contact</a>
+            {{ if .Display }}
+                <a href="/newUpload">Upload</a>
+            {{ end }}
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div class="side_right"></div>
+    <div class="content">
+        {{ range .Uploads}}
+            <div class="upload">
+                <strong>{{ .GetUser.GetUsername }} uploaded:</strong><br>
+                <strong><a name="link" href="/{{.GetItemname}}">{{.GetItemname}}</a></strong><br>
+                <span>{{.GetDescription}}</span><br><br>
+            </div>
+        {{ end }}
+    </div>
+</div>
+</body>
+</html>

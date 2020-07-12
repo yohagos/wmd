@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/index.css">
+    <script src="/static/layout.js" type="application/javascript"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="side_left"></div>
+    <div class="nav_bar">
+        <div class="nav_bar_list">
+            <a href="/info">Info</a>
+            <a href="/contact">Contact</a>
+            {{ if .Display }}
+                <div class="error">
+                    <a href="/newUpload">Upload</a>
+                </div>
+            {{ end }}
+            <a href="/logout">Logout</a>
+            <button type="button" id="berechnen" onclick="errorComponent()">error test</button>
+        </div>
+    </div>
+    <div class="side_right"></div>
+    <div class="content">
+        <h1>{{.Error}}</h1>
+    </div>
+</div>
+</body>
+</html>

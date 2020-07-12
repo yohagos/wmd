@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WMD - Contact</title>
+    <link rel="stylesheet" type="text/css" href="/static/index.css">
+    <script src="/static/layout.js" type="application/javascript"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="side_left"></div>
+    <div class="nav_bar">
+        <div class="nav_bar_list">
+            <a href="/">Index</a>
+            <a href="/info">Info</a>
+            {{ if .Display }}
+                <div class="error">
+                    <a href="/newUpload">Upload</a>
+                    <a href="/logout">Logout</a>
+                </div>
+            {{ else }}
+                <a href="/register">Register</a>
+            {{ end }}
+        </div>
+    </div>
+    <div class="side_right"></div>
+    <div class="content">
+        <pre>For any questions or ideas for improvements, please contact : <br><br>admin@admin.fra-uas.de</pre>
+    </div>
+</div>
+</body>
+</html>

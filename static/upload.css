@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper > div {
+    /* für alle divs unter wrapper class */
+    padding: 1em;
+    color: black;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    /* kannst auch prozente nehmen 10% 80% 10% */
+    grid-template-rows: 75px 100%;
+    /* die 75px bezieht sich auf top nav is fix damit es nicht groeßer wird */
+}
+
+.side_left {
+    grid-column: 1;
+    grid-row: 1 / 5;
+    background-color: white;
+}
+
+.nav_bar {
+    grid-column: 2 / 2;
+    grid-row: 1;
+    background-color: #296fe6;
+    border: 2px solid rgba(0, 58, 238, 0.87)
+}
+
+.side_right {
+    grid-column: 3;
+    grid-row: 1 / 5;
+    background-color: white;
+}
+
+.content {
+    grid-column: 2 / 2;
+    grid-row: 2/ 5;
+    border: 1px solid cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.error {
+    grid-column: 2 / 2;
+    grid-row: 2/ 5;
+    border: 1px solid black;
+}
+
+.nav_bar_list {
+    display: flex;
+    justify-content: space-around;
+    /*teste space-between etc*/
+}
+
+.nav_bar_list > a {
+    color: white;
+}
+
+.nav_bar_list > a:hover {
+    /*background-color: white;
+    color: #296fe6;*/
+}
+
+#c_hidden {
+    visibility: hidden;
+}
+
+#sel2 {
+    visibility: hidden;
+    box-shadow: none;
+}
+
+#sel2:focus {
+    -webkit-tap-highlight-color: white;
+    -webkit-user-modify: read-write-plaintext-only;
+}
+
+#desc {
+    resize: none;
+}
+
+#item,
+#desc,
+#type,
+#sel2,
+#sel1,
+#btn,
+#c_hidden,
+#up {
+    align-self: center;
+    justify-self: center;
+    height: 40px;
+    width: 50%;
+}
+
+#formula, .sel1, #up {
+    display: flex;
+    flex-direction: column;
+}
+
+/*.format-form{
+
+    justify-items: center;
+}*/
